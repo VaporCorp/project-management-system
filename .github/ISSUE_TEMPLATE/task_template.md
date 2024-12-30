@@ -1,9 +1,9 @@
 ---
 name: Task
 about: Create a task for this project
-title: '[TASK]: '
+title: "[TASK]: "
 labels: enhancement
-assignees: 'VaporCorp'
+assignees: VaporCorp
 
 ---
 
@@ -17,6 +17,9 @@ A clear and concise description of the task.
 
 **Additional Information**
 Any additional information or context about the task.
+
+**Related documentation**
+Any related documentation for this task.
 
 **Related Issues**
 List any related issues or dependencies.
