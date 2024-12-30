@@ -5,7 +5,6 @@ services:
       dockerfile: Dockerfile.dev
     volumes:
       - ./backend:/usr/src/app
-      - /usr/src/app/node_modules
     ports:
       - "3000:3000"
     environment:
@@ -13,6 +12,22 @@ services:
     networks:
       - app-network
 
+  db:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=pmsvaporcorp
+      - POSTGRES_PASSWORD=ZmD5ua7ry5KY93i
+      - POSTGRES_DB=pms
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+
 networks:
   app-network:
     driver: bridge
+
+volumes:
+  postgres_data:
